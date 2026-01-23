@@ -42,3 +42,5 @@ console.log(b , typeof(b));
 let q = "11.11";
 console.log(parseInt(q));
 console.log(parseFloat(q));
+
+console.log("saran");
