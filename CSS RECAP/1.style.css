@@ -1,0 +1,39 @@
+/* selectors in css */
+
+/* * is a univeral selector */
+*{
+    color: rgb(77, 5, 244);
+}
+
+/* element selector */
+h4 {
+    /* if we use !important the color will definitely change */
+    color: yellow !important; 
+}
+
+
+/* id selector */
+/* the id must be unique */
+#name{
+    color: crimson;
+}
+
+/* class selector */
+.na{
+    color: darkgreen;
+}
+
+/* child selector */
+div>p{
+  color: rgb(198, 71, 139);
+}
+
+/* descendent selector */
+div a{
+    color: rgb(3, 255, 7);
+}
+
+/* sibling selector */
+h1~h4{
+    color: pink;
+}

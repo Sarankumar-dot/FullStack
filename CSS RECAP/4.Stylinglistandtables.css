@@ -1,0 +1,43 @@
+/* styling the lists using style type properties */
+ul{
+    /* list-style-type: lower-latin; */
+
+    /* we can also add images on the list icons
+       for this we have to convert the image into an icon */
+    list-style-image:url(favicon.ico);
+
+    /* this is used to say where your icon is going to reside */
+    list-style-position:outside;
+
+    /* you can also add like */
+    /* list-style: inside circle; */
+    
+}
+
+
+
+ol{
+    list-style-type: circle;
+}
+
+table{
+   margin: auto;
+   
+}
+
+th{
+   border-bottom: 1px solid black;
+   padding: 10px;
+   border-spacing: 10px;
+}
+
+td{
+    padding: 10px;
+    border: 1px solid black;
+    border-spacing: 10px;
+}
+
+tr:nth-child(even){
+    background-color: yellowgreen;
+    color: white;
+}

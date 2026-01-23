@@ -1,0 +1,66 @@
+body{
+    background-image: url("images/pexels-jplenio-1146708.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:900px;   /* fills screen, may crop */
+
+ color: aliceblue;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+div{
+    background-color: rgba(0,0,0,.5);
+    width: 200px;
+    padding: 10px;
+    margin: 250px auto;
+    border-radius: 8px;
+
+}
+
+h1{
+    color:chartreuse;
+}
+
+label,input{
+    text-align:start;
+    margin-left: 10px;
+    margin: 2px;
+    border-radius: 4px;
+    border: none;
+}
+form{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.in{
+    width: 190px;
+    height: 25px;
+    margin: 5px;
+}
+
+button{
+    margin: 5px;
+}
+
+.in:focus{
+   background-color: rgb(237, 137, 61);
+}
+
+.in , button:hover,input{
+    cursor:copy;
+}
+
+button{
+    background-color:blanchedalmond;
+    border: 0px;
+    border-radius: 4px;
+    padding: 5px;
+    transition: all .5s ease-in-out;
+
+}
+
+button:hover{
+    transform: scale(1.2);
+  
+}

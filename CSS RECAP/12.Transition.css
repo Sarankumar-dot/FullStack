@@ -1,0 +1,69 @@
+.square{
+    background-color: aqua;
+    height: 400px;
+    width: 400px;
+
+    /* transition-duration: 3s;
+    transition-timing-function: ease-in-out;
+    transition-property: background-color;
+    transition-delay: 2s; */
+
+    /* instead of using these properties we can use the shorthand property */
+
+    transition: all 1s 1s linear;
+     
+}
+
+
+.square:hover{
+    background-color: black;
+    width: 600px;
+
+    /* in transform there are functions like 
+       scale,scalex,scaley,rotate,rotatex,rotatey,translate(px),translatex,translatey - this will move the object,
+    */
+    transform:translate(45px);
+}
+
+
+
+.box{
+    height: 100px;
+    width: 100px;
+    background-color: brown;
+    border-radius: 50%;
+    position: relative;
+    animation-name: circle;
+    animation-timing-function: ease-out;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    -webkit-animation-delay: 2s;
+
+    transition: all 2s linear;
+
+
+}
+
+
+
+
+@keyframes circle{
+    0%{
+        background-color: aqua;
+        width: 50px;
+        height: 50px;
+        left: 0px;
+        top:0px;
+    }
+
+    100%{
+        background-color: chartreuse;
+        width: 300px;
+        height: 300px;
+        left: 50px;
+        top: 100px;
+    }
+}
+
+

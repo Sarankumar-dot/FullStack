@@ -1,0 +1,62 @@
+h1{
+    font-size: 32px;
+    border: 1px solid black;
+    width: 300px;
+}
+
+p{
+    font-size: 32px;
+    border: 1px solid black;
+    max-width: 1000px;
+    max-height: 150px;
+
+    /* verflow removes the excess content on paras */
+    overflow:scroll;
+    height: auto;
+    text-align: justify;
+
+    padding: 15px;
+
+    margin-top: auto auto auto auto;
+}
+
+
+.div{
+    border: 1px solid blue;
+    max-width: 1000px;
+
+    
+    /* border-radius: 30%;
+    border-width: 10px;
+    border-bottom-left-radius: 1000px;
+    border-bottom-right-radius: 1000px;
+    border-top-left-radius: 0%;
+    border-top-right-radius: 0%;
+    border-radius: 30px 200px 30px 200px;
+    border-width: 100px 50px 200px 100px; 
+    border-style: double; */
+
+    padding: 10px;
+    margin-top: auto auto auto auto;
+}
+
+/* display properties
+    1. display:inline; - which is used to change the block level to inline.
+                         we cant change the height and width in inline display properties.
+    2. display:block : - converts a inline element as block ::-webkit-meter-even-less-good-value
+                         we can change the height and width to block level element 
+    3. display:inline block - which keeps the content as inline and element as block
+                        height and width can be changed in it.
+*/
+
+li{
+    display: inline-block;
+    margin: 10px;
+    border: 1px solid black;
+    height: auto;
+}
+
+ul{
+    /* border: 1px solid black; */
+    margin-left: 400px;
+}

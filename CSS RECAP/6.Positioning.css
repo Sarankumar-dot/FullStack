@@ -1,0 +1,36 @@
+.red{
+    height: 300px;
+    width: 300px;
+    background-color: red;
+    
+}
+
+.blue{
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+    
+
+    /* position types
+       1.static - which is a default one
+       2. relative - which we can use to move the thing in left , top,right,bottom etc 
+       3. absolute - which means the content below or above it does not care that they exist. we can change its position but it will check for a non static parent 
+       4. fixed - the element just gets fixed in the screen and we can change its position and its parent is body
+       5. inherit - inherits parents position
+       6. sticky - sticks to a particular place when we move it
+       */
+
+    /* position:relative;
+    bottom: 200px;
+    left: 100px; 
+    */
+
+    /* position: sticky;
+    top: 0px;
+    bottom: 0px; */
+}
+
+p{
+    text-align: justify;
+    font-family: 'Times New Roman', Times, serif;
+}

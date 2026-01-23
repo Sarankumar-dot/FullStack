@@ -1,0 +1,67 @@
+.outerbox{
+    min-height: 400px;
+    background-color: red;
+    display: flex;
+    flex-direction:column;
+    /* flex wrap adjusts the elements according to the screen */
+    flex-wrap:wrap; 
+    justify-content:space-around;
+    align-items:center;
+}
+
+.box1{
+    /* we can align each boxes as we like by using align self */
+    align-self: center;
+    justify-self: center;
+
+    flex-shrink: 0 ;
+}
+
+.box2{
+    align-self:center;
+     flex-grow: 1;
+}
+
+.box{
+    width: 150px;
+    height: 150px;
+    background-color: black;
+    border: 2px solid white;
+    
+}
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+
+p{
+    padding: 10px;
+    text-align: justify;
+    
+}
+.p1{
+    background-color: aqua;
+    /* the flex property is used to adjust the width by ratios */
+    flex: 1;
+
+    /* the order property is used to define how the paras should be ordered */
+    order:3;
+
+}
+
+.p2{
+    background-color: black;
+    color: white;
+    flex: 1;
+    order:1;
+}
+
+.p3{
+    background-color: blue;
+    color: white;
+    flex: 2;
+    order: 2;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+
+    <form action="13Form2.html" method="GET" enctype="multipart/form-data">
+
+        <div>
+            <label for="username">USER NAME : </label>
+            <input type="text" name="username" id="username" value="raj" maxlength="10" minlength="2" required>
+        </div>
+
+        <div>
+            <label>
+                Password : 
+                <input  type="password" name="password" id="password" value="1234" maxlength="11" minlength="2" required>
+            </label>
+        </div>
+
+        <!-- input types -->
+        <input type="date">
+        <input type="color">
+        <input type="file">
+        <input type="month">
+        <input type="email">
+
+        <!-- use checkbox when you have multiple selections -->
+        <!-- use radio buttons if you only need to select one -->
+        <label for="gender">
+            male <input name="gender" id="gender" type="radio" value="male">
+            femae <input name="gender" id="gender" type="radio" value="female">
+        </label>
+
+        <select name="dropdown" multiple> 
+            <!-- to use multiple press multiple and select in dropdown -->
+            <option value="saran">saran</option>
+            <option value="kumar">kumar</option>
+        </select>
+        
+
+        <textarea cols="30" rows="10"></textarea>
+        
+
+        <div>
+            <button type="submit"> Sign up</button>
+            <button type="reset">reset</button>
+            
+        </div>
+
+        <button type="button">click me</button>
+    </form>
+    
+</body>
+</html>

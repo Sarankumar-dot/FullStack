@@ -1,0 +1,35 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.container div{
+    border: 1px solid black;
+    font-size: 2em;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container{
+    display: grid;
+    background-color: brown;
+    border: 1px solid wheat;
+
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows:10vh 80vh 10vh ;
+
+    color: wheat;
+}
+
+.header{
+    grid-column: span 5;
+}
+.maincontent{
+    grid-column: span 3 ;
+}
+
+.footer{
+    grid-column: span 5;
+}

@@ -1,0 +1,69 @@
+body{
+    background-color: rgb(228, 140, 140);
+}
+
+
+.container{
+    display: grid;
+    /* used to align items in columns */
+    /* grid-template-columns: 33.30% 33.30% 33.30%; */
+    /* 1fr splits the elements into equal parts */
+    /* grid-template-columns: 1fr 1fr 1fr; */
+
+    /* we can use repeat funtion to give the column spacing in one function */
+    /* grid-template-columns: repeat(3,1fr); */
+
+    /* we can use minmax method and auto fit is used to fit the content according to the screen size */
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    /* gap between rows and columns */
+    column-gap: 20px;
+    row-gap: 20px;
+}
+
+p{
+    padding: 1rem;
+    background: linear-gradient(red,black);
+    color: white;
+    border: 1px solid wheat;
+}
+
+.numbers{
+    background-color: black;
+    margin: 20px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 100px 100px 100px;
+    grid-auto-rows:100px;
+    gap: 1px;
+
+    /* changing the flow to column the default one is row */
+    grid-auto-flow: row;
+
+
+    
+    
+}
+
+.n{
+    font-size: 4rem;
+    background-color: aqua;
+    width:50%;
+    color: rgb(3, 2, 0);
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    margin: auto;
+}
+
+/* .box1{
+   grid-column: span 3;
+}
+
+
+.box2{
+    grid-row: span 2;
+}
+
+.box6{
+    grid-row: span 2;
+} */

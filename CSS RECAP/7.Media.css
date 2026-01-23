@@ -1,0 +1,23 @@
+p{
+    background-color: brown;
+    color: aliceblue;
+    text-align: justify;
+}
+
+
+@media all and (min-width:650px) {
+    .container p{
+        width: 30%;
+        float: left;
+        margin-left: 10px;
+        background-color: blue;
+        padding: 5px;
+    }
+}
+
+@media print{
+    .container p{
+        background-color: black;
+        color: #fffcfc;
+    }
+}

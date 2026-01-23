@@ -1,0 +1,13 @@
+.lin{
+    height: 400px;
+    width: 400px;
+    background: linear-gradient(to top,black,red,green,yellow,blue,violet);
+
+}
+
+
+.radial{
+    height: 400px;
+    width: 400px;
+    background: repeating-radial-gradient(green 10px ,yellow 30px ,yellow 10px,green 30px);
+} 
