@@ -1,6 +1,6 @@
 // 1.Global scope variables
 
-const age = 20;
+const age = 20;// global scope variable 
 
 function ag(){
     console.log(age); // this will execute when it is called because the var is global scope 

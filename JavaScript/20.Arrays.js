@@ -1,4 +1,4 @@
-// array is a data structure which is used to store any datatypes.
+// array - used to store multiple values in a single variable
 // array can be declared with [] square brackets
 
 // | Category          | Methods                           |
@@ -46,21 +46,24 @@ let a = [1,2,3,4,5,6];
 
 console.log(a.slice(0,5)); // from start to end+1;
 
-//splics - used to add or remove elements, changes the original array
+//splice - used to add or remove elements, changes the original array
 console.log( "removed elements : ",a.splice(1,2));
 console.log(" changed array :" ,a);
 
-// we can also add elements using splice
+// we can also modify elements using splice
 a.splice(1,0,99); // changes 99 in index 1
 console.log(a);
 
 
 // join - used to convert an array to a string
 let s = ["hello" , "worlds"];
-console.log(s.join(" "));
+console.log(s.join(" "));// joins with space
+console.log(s.join(","));// joins with comma
+console.log(s.join("-"));// joins with dash
+
 
 // revverse an array
-console.log(a.reverse());
+console.log(a.reverse());//
 
 // sorting an array
 let nums = [1,10,4,5,2,3];

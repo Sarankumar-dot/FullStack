@@ -8,7 +8,7 @@ console.log(Boolean("")); // false because of an empty string
 let user = "";
 
 let loggedIn = user || "guest";// this will add the guest to loggeIn if user is empty
-console.log(Boolean(loggedIn));
+console.log(Boolean(loggedIn));// true
 
 
 
@@ -18,10 +18,10 @@ console.log(Boolean(loggedIn));
 // "0" , "false" these two looks falsy but they are strings considered to be true
 
 let obj = {};
-console.log(Boolean(obj));
+console.log(Boolean(obj));// true
 
 let arr = [];
-console.log(Boolean(arr));
+console.log(Boolean(arr));// true
 
 // some falsy values are 
 // 0 , -0 , 0n - BigInt's zero , null , undefined , "" empty string , Nan

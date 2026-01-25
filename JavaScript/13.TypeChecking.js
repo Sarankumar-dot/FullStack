@@ -8,7 +8,7 @@ console.log(typeof({}));
 console.log(typeof([]));// because array is a type of object 
 
 
-// instance of only work works objects
+// instance of only works with objects 
 
 console.log([] instanceof Array);
 console.log({} instanceof Object);
@@ -40,7 +40,7 @@ console.log(b , typeof(b));
 // functions like parseInt and parseFloat also can be used
 
 let q = "11.11";
-console.log(parseInt(q));
-console.log(parseFloat(q));
+console.log(parseInt(q));// only returns integer part
+console.log(parseFloat(q));// returns decimal value also
 
 console.log("saran");

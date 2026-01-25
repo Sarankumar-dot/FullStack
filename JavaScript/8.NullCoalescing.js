@@ -15,5 +15,5 @@ console.log(res);
 
 let result;
 
-result = result ?? "saran";
+result = result ?? "guest";
 console.log(result); // returns saran if the value is null or undefined

@@ -1,7 +1,8 @@
 // can be created by backticks ``
 // uses are multiline string writing , string interpolation , improved readability
 
-// string interpolation
+// string interpolation - embedding expressions inside a string
+// using ${} syntax
 
 let name = "saran";
 let age = 21;

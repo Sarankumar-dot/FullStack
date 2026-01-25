@@ -1,4 +1,15 @@
-// there are three variables in javaScript
+// there are three types variables in javaScript
+
+// | Feature                        | `var`               | `let`       | `const`     |
+// | ------------------------------ | ------------------- | ----------- | ----------- |
+// | Scope                          | Function Scope      | Block Scope | Block Scope |
+// | Hoisted?                       | ✅ Yes               | ✅ Yes       | ✅ Yes       |
+// | Initialized during hoisting?   | ✅ Yes (`undefined`) | ❌ No (TDZ)  | ❌ No (TDZ)  |
+// | Accessible before declaration? | ✅ Yes (`undefined`) | ❌ Error     | ❌ Error     |
+// | Redeclaration allowed?         | ✅ Yes               | ❌ No        | ❌ No        |
+// | Reassignment allowed?          | ✅ Yes               | ✅ Yes       | ❌ No        |
+// | Must initialize immediately?   | ❌ No                | ❌ No        | ✅ Yes       |
+
 
 // 1.Let - which can be reassigned and cannit be redeclared
 
@@ -16,8 +27,8 @@ console.log(e);
 // 2.const - which cannot be redeclared or reassigned
 
 const b = 30;
-// b = 20; cannot be redeclared
-// and also cannot be reassigned
+// b = 20; cannot be reassigned
+// and also cannot be redeclared
 console.log(b);
 
 // const also has block scope

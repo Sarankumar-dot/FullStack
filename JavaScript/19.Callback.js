@@ -1,5 +1,5 @@
 // callback means a function is passed as an argument to another function
-
+// Example:
 function greet(name){
     console.log("hello" + name)
 }
