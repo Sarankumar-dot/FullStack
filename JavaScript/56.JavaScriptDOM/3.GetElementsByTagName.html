@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p>this is a para tag</p>
+    <p>this is a para tag</p>
+
+    <button>this is a button</button>
+    
+
+    <script>
+
+// | Method                     | Returns        | Live?            | forEach? |
+// | -------------------------- | -------------- | ---------------- | -------- |
+// | `getElementsByTagName()`   | HTMLCollection | ✅ Yes            | ❌ No     |
+// | `getElementsByClassName()` | HTMLCollection | ✅ Yes            | ❌ No     |
+// | `getElementsByName()`      | NodeList       | ❌ Usually Static | ✅ Yes    |
+// | `querySelectorAll()`       | NodeList       | ❌ Static         | ✅ Yes    |
+
+        let paras = document.getElementsByTagName("p");
+        let butt = document.getElementsByTagName("button");
+
+        //changing content in paras
+        for(let i = 0;i<paras.length;i++){
+            const element = paras[i];
+            element.textContent = ("this is a new content in para " + (i+1)).toUpperCase();
+            element.style.fontSize = "20px";
+            element.style.fontWeight = "bold";
+            
+        }
+
+        // changing content in buttons
+        for(let i = 0;i<butt.length;i++){
+            const element = butt[i];
+            element.textContent = ("this is a new content in button " + (i+1)).toUpperCase();
+            element.style.fontSize = "20px";
+            element.style.fontWeight = "bold";
+            element.style.borderRadius = "8px";
+            element.style.border = "0px";
+            element.style.backgroundColor = "red";
+            element.style.coloe = "white";    
+        }
+        
+
+    </script>
+</body>
+</html>

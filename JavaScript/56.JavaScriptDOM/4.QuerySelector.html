@@ -1,0 +1,28 @@
+<!-- query selector is used to selector elements in the DOM  -->
+<!-- by using css selectors -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <p class="message"> this is a message</p>
+    <p class="message">hi</p>
+
+    <script>
+        // querySelector only returns one element
+        const query = document.querySelector(".message"); // this only retrives the first element or only one element
+        console.log(query.textContent)
+
+        // querySelectorAll returns all the elements
+        const queryAll = document.querySelectorAll(".message");
+        queryAll.forEach((ele) => console.log(ele.textContent));
+    </script>
+</body>
+</html>

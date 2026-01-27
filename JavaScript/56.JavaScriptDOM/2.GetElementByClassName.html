@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .example{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <p class="example">this is 1st class</p>
+    <p class="example">this is 2nd class</p>
+    <p>this one does not have the example class</p>
+
+    <script>
+        const tags = document.getElementsByClassName("example");
+        console.log(tags);
+        setTimeout(() =>{
+            for(let i = 0;i<tags.length;i++){
+                // we can access the js style properties by camelCase eg for bg you need to get it as backgroundColor
+                tags[i].textContent = "new text with class";
+                tags[i].style.fontWeight = "bold"; // changes to bold
+                tags[i].style.color = "red";
+                tags[i].style.backgroundColor = "yellow";
+            }
+        },2000)
+
+        console.log(document.body.style);// to get all the available style properties
+    </script>
+</body>
+</html>

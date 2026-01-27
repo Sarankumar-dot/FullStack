@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- elements by id -->
+    <p id="message">a paragraph</p>
+
+    <!-- elements by name -->
+    <p name="example">this is line 1</p>
+    <p name="example">this is line 2</p>
+
+    <script>
+        // getting getElementById
+        // innerText - changes the inner innerText
+        const para = document.getElementById("message");
+        console.log("current txt : " ,para.innerText) // we can see what is the value in side it
+        para.innerText = "iam sarankumar";
+        console.log("the tex change to : " ,para.innerText);
+
+        // innerHTML - is used to add an element in the existing element
+        // we are going to add a button in th ptag
+        para.innerHTML = "<button type='submit'>click me</button>";
+        console.log(para); // the innerText will be removed and the new button will be added cuz the last thing we changed only gets changed
+
+        // getting elements by name getElementByName
+        // it gets all the elements that has the same name
+        const eg = document.getElementsByName("example");
+        console.log(eg);// prints a nodelist
+        console.log(eg[0]);//prints the first p tag
+        //eg.innerText = "both gets changed"; we cannot  access it like this because it is stored like an array
+        // so we can access it like a loop or like this
+        //eg[0].innerText = "this gets changed"; access like an array
+
+        // how can we access all the elements
+        // use a loop or any array methods like foreach,reduce , filter anything
+
+        // eg.forEach((value) =>{
+        //     value.innerText = "elements changed";
+        // })
+
+        // else you can use a for loop
+        for(let i = 0;i<eg.length;i++){
+            eg[i].innerText = "elements are changed using a for loop";
+        }
+        
+
+    </script>
+    
+</body>
+</html>
