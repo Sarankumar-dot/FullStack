@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="ElementToBeRemoved">
+        <p>iam an element please dont kill me</p>
+    </div>
+
+    <button id="button-1" onclick="removeElement()">kill div</button>
+
+    <script>
+        function removeElement(){
+            const remove = document.getElementById("ElementToBeRemoved");
+            remove.remove(); // remove() is a function which removes the elements
+
+            // after removing i planned to create a para
+            const para = document.createElement("p");
+            para.innerText = "the div is killed successfully";
+            document.body.appendChild(para);
+
+            const butt = document.getElementById("button-1");
+            butt.remove();
+
+            //button to save the div's para
+            const but = document.createElement("button");
+            but.innerText = "save the div";
+
+             but.onclick = function () {
+             const newDiv = document.createElement("div");
+             newDiv.innerText = "Div restored successfully";
+             document.body.appendChild(newDiv);
+
+             but.remove(); // optional: remove save button after use
+             para.remove();
+             };
+
+            // add button to DOM
+            document.body.appendChild(but);
+
+        }
+    </script>
+</body>
+</html>

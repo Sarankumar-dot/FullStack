@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="main">
+        <p id="child">
+            this is a para tag
+        </p>
+    </div>
+
+    <script>
+        // getting parent from child
+        const child = document.getElementById("child");
+        const parent = child.parentElement;
+
+        parent.style.backgroundColor = "red";
+        parent.style.height = "100px";
+        parent.style.width = "100px";
+        child.style.color  ="white";
+    </script>
+</body>
+</html>

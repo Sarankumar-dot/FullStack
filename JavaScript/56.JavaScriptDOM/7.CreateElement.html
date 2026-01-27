@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <!-- here we are going to add a p tag to the body with only js-->
+
+    <script>
+        const paraTag = document.createElement("p");
+        paraTag.innerText = "this is a created by JavaScript";
+        paraTag.style.color = "red";
+        // for adding this to the body 
+        document.body.appendChild(paraTag);
+
+        // eg - 2 appending a button in a para
+        const button = document.createElement("button");
+        button.innerText = "this is a submit button";
+
+        // we can set the html attribute to the button or any element in two ways
+        // 1 .
+        button.type = "submit"; // type of button is setted to submit
+
+        //2.
+        button.setAttribute("id","button-1"); // using set attribute to set the inner properties
+        paraTag.appendChild(button);
+
+
+
+        // eg 3 - creating a dropdown and adding elements to it
+        const dropdown = document.createElement("select");
+        
+
+        const defaultOption = document.createElement("option");
+        defaultOption.text = "Select";
+        dropdown.appendChild(defaultOption);
+
+        
+
+        let arr = ["csbs","ece","mech"];
+        arr.forEach((value) =>{
+            const opt = document.createElement("option");
+            opt.value = value;
+            opt.text = value;
+            dropdown.appendChild(opt); // here we cannot use document.dropdown.appendChild(opt) because you have not created the dropdown element yet so you can only use  dropdown.appendChild(opt)
+        })
+
+
+        document.body.appendChild(dropdown);
+        
+
+    </script>
+    
+</body>
+</html>
