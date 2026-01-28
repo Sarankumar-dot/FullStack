@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="input">Text Box :</label>
+    <input id="in" type="text">
+
+    <script>
+        let input = document.getElementById("in");
+        input.addEventListener("keydown",(()=>{
+            console.log(event.key);
+        }))
+
+        input.addEventListener("copy",(()=>{
+            alert("dont try to copy broo ")
+        }))
+
+        input.addEventListener("paste",(()=>{
+            alert("dont try to paste broo ")
+        }))
+    </script>
+</body>
+</html>

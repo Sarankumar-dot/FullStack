@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- event delegation means an event is assigned to the parent eleemnt and the parent controls all the events of the child -->
+
+    <ul id="parent">
+        <li>home</li>
+        <li>about</li>
+        <li>services</li>
+    </ul>
+
+    <script>
+        let parent = document.getElementById("parent");
+        parent.addEventListener("click" , ((e)=>{
+            if(e.target.tagName == "LI"){
+                console.log("you clicked" , e.target.textContent);
+            }
+        }))
+    </script>
+</body>
+</html>

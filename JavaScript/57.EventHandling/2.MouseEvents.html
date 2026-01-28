@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- task -1 -->
+    <p id="para">this is a para</p>
+    <button id="but">click to delete the button</button>
+
+    <!-- task 2 change the text in the div while hovering -->
+     <div id="di">this is a div tag</div>
+
+    <script>
+        //task -1
+        let para = document.getElementById("para");
+        let button = document.getElementById("but");
+
+        button.addEventListener("click",(()=>{
+            para.innerText = "the para is changed by button click";
+        }))
+
+        // task - 2
+        let div = document.getElementById("di");
+        div.addEventListener("mouseover",hoverEffect);
+        div.addEventListener("mouseout",(()=>{
+            div.textContent = "hovered successfully";
+        }));
+
+        function hoverEffect(){
+            div.textContent = "the text is changed by hovering";
+        }
+    </script>
+</body>
+</html>

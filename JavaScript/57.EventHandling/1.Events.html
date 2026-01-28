@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="alert('move the mouse bruh')" id="butt1">button 1</button>
+    <button ondblclick="alertFunction()" id="butt2">button 2</button>
+    <button id="butt3">button 3</button>
+
+    <script>
+        function alertFunction(){
+            alert("dont click brouh");
+        }
+
+
+        const button = document.getElementById("butt3");
+        button.addEventListener("mouseleave",(()=>{
+            alert("dont leave bruh complete the clicking")
+        }))
+
+        
+    
+    </script>
+
+</body>
+</html>
