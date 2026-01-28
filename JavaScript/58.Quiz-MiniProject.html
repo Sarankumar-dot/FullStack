@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz-App</title>
+
+    <style>
+        
+        .container{
+            max-width: 400px;
+            background-color: bisque;
+            text-align: center;
+            margin: 100px auto;
+            font-family: sans-serif;
+            border: 1px solid black;
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        button {
+            padding: 10px;
+            margin-top: 20px;
+        }
+        #but{
+            background-color: white;
+            color: brown;
+            width: 100%;
+            border-radius: 20px;
+            border: 0px;
+            cursor: pointer;
+            
+
+
+        }
+
+        .nextBtn{
+            background-color: white;
+            color: brown;
+            width: 100%;
+            border-radius: 20px;
+            border: 0px;
+            cursor: pointer;
+
+
+        }
+
+         .correct{
+            background-color: rgb(14, 240, 60);
+            color: brown;
+            width: 100%;
+            border-radius: 20px;
+            border: 0px;
+            cursor: pointer;
+
+
+        }
+
+         .incorrect{
+            background-color: rgb(255, 10, 10);
+            color: rgb(83, 42, 165);
+            width: 100%;
+            border-radius: 20px;
+            border: 0px;
+            cursor: pointer;
+
+
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2 id="question">Question text</h2>
+        <div id="answers">
+
+        </div>
+        <button id="but">next question</button>
+    </div>
+
+    <script>
+       const questions = [
+
+    {
+        question: "What is the correct way to declare a constant variable?",
+        answers: [
+            { text: "let", correct: false },
+            { text: "var", correct: false },
+            { text: "const", correct: true }
+        ]
+    },
+    {
+        question: "Which keyword is used to declare a variable that can be reassigned?",
+        answers: [
+            { text: "const", correct: false },
+            { text: "let", correct: true },
+            { text: "final", correct: false }
+        ]
+    },
+    {
+        question: "Which of the following is used to define a function in JavaScript?",
+        answers: [
+            { text: "function", correct: true },
+            { text: "define", correct: false },
+            { text: "method", correct: false }
+        ]
+    },
+    {
+        question: "Which symbol is used for single-line comments in JavaScript?",
+        answers: [
+            { text: "//", correct: true },
+            { text: "/* */", correct: false },
+            { text: "#", correct: false }
+        ]
+    },
+    {
+        question: "Which method is used to print something in the console?",
+        answers: [
+            { text: "console.print()", correct: false },
+            { text: "console.log()", correct: true },
+            { text: "print()", correct: false }
+        ]
+    }
+];
+
+      const questionElement = document.getElementById("question");
+      const options = document.getElementById("answers");
+      const nextBtn = document.getElementById("but");
+
+      let currentQuestion = 0; // index of first question
+      let score = 0;
+      nextBtn.disabled = true;
+
+      // first lets add teh questions
+      function startQuiz(){
+        nextBtn.removeEventListener("click",startQuiz);
+        currentQuestion = 0;
+        score = 0;
+
+        showQuestion();
+      }
+
+      function showQuestion(){
+        resetState();
+        const ques = questions[currentQuestion];
+        questionElement.innerText = ques.question;
+
+        // adding options
+        ques.answers.forEach((val) =>{
+            const button = document.createElement("button");
+            button.innerText = val.text;
+            button.classList.add("nextBtn")
+            options.appendChild(button);
+
+             if(val.correct){
+                button.dataset.correct = val.correct;
+            } // for finding which is correct
+
+            button.addEventListener("click",selectAnswer);
+           
+        })
+
+        
+      }
+
+      function selectAnswer(e){
+    const selectedBtn = e.target;
+    const isCorrect = selectedBtn.dataset.correct === "true";
+
+    if(isCorrect){
+        selectedBtn.classList.add("correct");
+        score++;
+    } else {
+        selectedBtn.classList.add("incorrect");
+    }
+
+    Array.from(options.children).forEach((button) =>{
+        if(button.dataset.correct === "true"){
+            button.classList.add("correct");
+        }
+        button.disabled = true;
+    });
+
+    nextBtn.disabled = false;
+}
+
+
+     
+
+      nextBtn.addEventListener("click" , () =>{
+        currentQuestion++;
+       
+
+        if(currentQuestion < questions.length){
+            showQuestion();
+        }else{
+            showScore();
+        }
+      })
+
+      function showScore(){
+        questionElement.innerText ="the score is : "+ score ;
+        nextBtn.disabled = false;
+        nextBtn.textContent = "start quiz again";
+        options.innerHTML = "";
+        nextBtn.addEventListener("click" , startQuiz);
+
+
+      }
+
+      function resetState(){
+        nextBtn.disabled = true;
+        options.innerHTML = "";
+      }
+      startQuiz();
+
+    </script>
+    
+</body>
+</html>

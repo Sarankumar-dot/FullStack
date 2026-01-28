@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form id="inputForm" action="">
+        <input type="text" name="" id="userName" placeholder="enter your name">
+        <input type="email" name="" id="email" placeholder="enter your email">
+        <button id="submit" type="submit">submit</button>
+    </form>
+
+    <script>
+        let form = document.getElementById("inputForm");
+        form.addEventListener("submit",((e) =>{ // here e is the event 
+            e.preventDefault();// it will stop the browser reload
+            let name = document.getElementById("userName").value;
+            let email = document.getElementById("email").value;
+
+            // validate the inputs
+            if(!name || !email){
+                alert("enter all the fileds");
+                return;
+            }
+
+            if(!email.includes("@")){
+                alert("enter your email correctly");
+                return;
+            }
+
+            console.log("form submitted" , {name,email})
+            
+        }))
+    </script>
+</body>
+</html>
