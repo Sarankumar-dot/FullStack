@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: cursive;
+            background: #f2f2f2;
+        }
+
+        .password-container {
+            padding: 30px;
+            border: 1px solid black;
+            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+            background-color: rgb(99, 172, 175);
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .input-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            gap: 10px;
+        }
+
+        #input {
+            width: 250px;
+            height: 30px;
+            border: 1px solid black;
+            border-radius: 8px;
+            padding-left: 10px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            background: black;
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        button:hover {
+            background: white;
+            color: black;
+            border: 1px solid black;
+        }
+
+        #alertContainer {
+            margin-top: 15px;
+            font-weight: bold;
+            font-size: 18px;
+            color: darkblue;
+        }
+
+        #copyIcon:hover{
+            background-color: blueviolet;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="password-container">
+        <h2>Random Password Generator</h2>
+
+        <div class="input-container">
+            <input type="text" id="input" placeholder="Create password" readonly>
+            <i class="fa-regular fa-copy" id="copyIcon"></i>
+        </div>
+
+        <button id="generate">Generate Password</button>
+
+        <div id="alertContainer"></div>
+    </div>
+
+    <!-- Link JS -->
+    <script src="script.js"></script>
+
+</body>
+</html>
