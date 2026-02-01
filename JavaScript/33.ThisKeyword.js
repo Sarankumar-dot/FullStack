@@ -11,7 +11,7 @@ let obj = {
     name:"saran",
     age:21,
     getDetails(){
-        console.log(this); // in object method this refers to the object itself
+        console.log("prints the current object which is obj : ",this); // in object method this refers to the object itself
         return this.name + " " + this.age; // accessing object properties using this keyword
     }   
 };
@@ -24,7 +24,7 @@ class Person{
         this.name = name;
         this.age = age;
     }   
-    getDetails(){
+     getDetails(){
         console.log(this); // in class method this refers to the instance of the class
         return this.name + " " + this.age; // accessing class properties using this keyword
     }
@@ -37,11 +37,12 @@ console.log(person1.getDetails()); // calling the class method
 // it helps to differentiate between local variables and object properties when they have the same name
 // it is also used in event handlers to refer to the element that triggered the event
 // arrow functions do not have their own this context they inherit this from the surrounding lexical context
+
 let obj2 = {
     name:"saran",
     age:21,
     getDetails:()=>{
-        console.log(this);// in arrow function this refers to the surrounding lexical context (global object in this case)
+        console.log("returns global scope : ",this);// in arrow function this refers to the surrounding lexical context (global object in this case)
         return this.name + " " + this.age; // here this will not refer to obj2 instead it refers to global object
     }   
 };

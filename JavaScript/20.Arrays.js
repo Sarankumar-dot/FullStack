@@ -1,5 +1,6 @@
 // array - used to store multiple values in a single variable
 // array can be declared with [] square brackets
+//in js arrays can store all type of datatypes in a single array
 
 // | Category          | Methods                           |
 // | ----------------- | --------------------------------- |

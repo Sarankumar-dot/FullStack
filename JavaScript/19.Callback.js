@@ -1,4 +1,4 @@
-// callback means a function is passed as an argument to another function
+// callback means a function is passed as an argument to another function and executed later
 // Example:
 function greet(name){
     console.log("hello" + name)

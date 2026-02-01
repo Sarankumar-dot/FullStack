@@ -10,7 +10,7 @@ console.log(addd(10,20));
 
 // Lexical this
 // Normal functions have their own `this` based on how they are called
-// Arrow functions do NOT have their own `this`; they inherit it from the outer scope
+// Arrow functions do NOT have their own `this`; they inherit it from the outer global scope
 
 const user = {
     name : "saran",
@@ -32,7 +32,7 @@ const user1 = {
   name: "Saran",
   greet() {
     setTimeout(function () {
-      console.log(this.name);
+      console.log(this.name);//this refers to the current object
     }, 1000);
   }
 };
@@ -54,7 +54,7 @@ const user2 = {
 user2.greet(); // returns name
 /* here it is doing opposite because
 
-Arrow functions work in setTimeout because they do NOT have their own this.
+Arrow functions work in setTimeout because they do NOT have their own this. they get their this value from their outer scope
 Normal functions DO have their own this.
 */
 

@@ -1,6 +1,6 @@
-// filter method is used to filter elements in the old array as ypu like  and create a new array
+// filter method is used to filter elements in the old array as you like  and create a new array
 
-let arr = [1,2,44,55,8,10,22];
+let arr = [1,2,44,55,8,10,22,88];
 
 let ans = arr.filter((ele) => {return ele%2 == 0});
 console.log(ans);

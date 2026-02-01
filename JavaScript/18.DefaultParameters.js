@@ -1,7 +1,8 @@
 // default parameter means the parameter which gets executed when we dont give an argument
 
+// parameters - are the variables written inside a function definition
 // arguments - values which are passed through the function definition
-// parameters - are the values defined inside a function definition
+
 
 function de(name = "guest"){
    return `Hello ${name}`;
@@ -13,7 +14,7 @@ console.log(de("saran"));
 //rest parameters
 
 function sum(...nums){
-   // return nums.reduce((a,b) => a+b,0);
+    return nums.reduce((a,b) => a+b,0);
    
 }
 

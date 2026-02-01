@@ -17,3 +17,4 @@ arr.forEach((Element) =>{
 console.log(ans);
 
 // forEach does not return anything it only returns undefined
+// we can only print elements in forEach
