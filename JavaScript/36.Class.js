@@ -42,7 +42,7 @@ class Truck{
 }
 
 Truck.info(); // we can call the static methods by using class name
-// Truck instance cannot access static methods
+// Truck instance(objects) cannot access static methods
 const truck1 = new Truck("volvo");
 // truck1.info(); // this will give error
 
@@ -91,4 +91,3 @@ console.log(p1.getName()); // this will print kumar
 // thus we can use getters and setters to access private properties
 // this is encapsulation in object oriented programming
 // thus classes in javascript provide a way to create objects and implement object oriented programming concepts like inheritance, encapsulation, and polymorphism
-

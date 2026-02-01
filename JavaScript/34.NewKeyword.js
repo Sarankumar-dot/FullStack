@@ -5,7 +5,7 @@ function Person(name, age){
     this.name = name;
     this.age = age;
 
-    this.getDetails = function(){ // this is the syntax for create a method function 
+    this.getDetails = function(){ // this is the syntax for creating a method function 
         return this.name + " " + this.age;
     }
 

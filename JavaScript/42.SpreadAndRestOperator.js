@@ -18,10 +18,10 @@ console.log(rest); // returns the rest elements in an array form
 
 // rest operator in objects
 const {name,...res} = {name : "saran" , age:21};
-console.log(res);
+console.log(name,res);
 
 // function using rest operator
-function sum(...numbers){
+function sum(...numbers){ // here it collects all values into an array
     return numbers.reduce((acc,value) =>{
         return acc += value;
     })
@@ -49,5 +49,5 @@ console.log(sum3(1,2,3,4,5)); // this will work fine as all the arguments are co
 function multiply(factor,...nums){
     return nums.map(num => num * factor);
 }
-console.log(multiply(2,1,2,3,4,5)); //
+console.log(multiply(2,1,2,3,4,5)); // here 2 is the factor and all remaing eleemnts are nums
 
