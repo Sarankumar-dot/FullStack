@@ -44,6 +44,8 @@
         let arr = ["csbs","ece","mech"];
         arr.forEach((value) =>{
             const opt = document.createElement("option");
+            opt.style.backgroundColor = "black";
+            opt.style.color = "white";
             opt.value = value;
             opt.text = value;
             dropdown.appendChild(opt); // here we cannot use document.dropdown.appendChild(opt) because you have not created the dropdown element yet so you can only use  dropdown.appendChild(opt)

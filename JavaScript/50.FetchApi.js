@@ -12,6 +12,13 @@ fetch('https://jsonplaceholder.typicode.com/posts/1')
 .then((any) => console.log("get result : ",any))
 .catch((error) => console.error("error " , error));
 
+// async function getData(){
+//     const data = await fetch('https://jsonplaceholder.typicode.com/posts/1');
+//     const json = await data.json(); // data.json() is also a promise so we have to wait here also
+//     console.log("the new data is ",json);
+// }
+
+// getData();
 
 // post - is used to send data to the server
 // eg for posting data to a url

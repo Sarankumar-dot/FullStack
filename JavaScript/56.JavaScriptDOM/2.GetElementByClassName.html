@@ -27,6 +27,24 @@
                 tags[i].style.color = "red";
                 tags[i].style.backgroundColor = "yellow";
             }
+
+
+// | Method / Property          | Returns        |
+// | -------------------------- | -------------- |
+// | `getElementsByClassName()` | HTMLCollection |
+// | `getElementsByTagName()`   | HTMLCollection |
+// | `element.children`         | HTMLCollection |
+// | `document.forms`           | HTMLCollection |
+// | `document.images`          | HTMLCollection |
+// | `document.links`           | HTMLCollection |
+// | `document.scripts`         | HTMLCollection |
+
+        //     Array.from(tags).forEach(element => {
+        //         element.textContent = "new text with class";
+        //         element.style.fontWeight = "bold"; // changes to bold
+        //         element.style.color = "red";
+        //         element.style.backgroundColor = "yellow";
+        //     });
         },2000)
 
         console.log(document.body.style);// to get all the available style properties

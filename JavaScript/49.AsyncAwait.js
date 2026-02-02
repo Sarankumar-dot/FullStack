@@ -25,7 +25,7 @@
 
 //show();
 
-// instead of using this we can convert the asychronous code to syncronous code 
+// instead of using this we can convert the asychronous code to syncronous code (not full synchronous but it looks like synchronous)
 // in which we do not need to use then and catch blocks
 // for this we are using async and await
 
@@ -45,12 +45,12 @@ function fetchData(){
     })
 }
 
-// the main usage of async and wait because async/await makes asynchronous code look like synchronous code, but it is still asynchronous internally.
-// for using await keyword the function must be a async funtion
+// the main usage of async and await because async/await makes asynchronous code look like synchronous code, but it is still asynchronous internally.
+// for using await keyword the function must be a async function
 async function show(){
 
     try{
-    const ans = await fetchData(); // await makes the compiler to wait tiil it receives its value
+    const ans = await fetchData(); // await makes the compiler to wait till it receives its value
     // after receiving it the below block of codes will gets executed
     console.log(ans);
     // but for handling the errors from the reject we have to use try and catch blocks
