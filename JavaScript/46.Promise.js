@@ -7,7 +7,7 @@
 
 // what is asynchronous operation?
 
-//Asynchronous operations are tasks in JavaScript that do not finish immediately.
+// Asynchronous operations are tasks in JavaScript that do not finish immediately.
 
 // Instead of stopping the program and waiting, JavaScript:
 
@@ -16,6 +16,19 @@
 // continues executing other code
 
 // comes back later when the task is finished
+
+// Promises are used to handle asynchronous operations in a clean and manageable way.
+// 🧠 What is Asynchronous Work?
+
+// Some tasks take time to complete, like:
+
+// Fetching data from an API 🌐
+
+// Reading a file 📂
+
+// Database operations 🗄️
+
+// Waiting for a timer ⏳
 
 const promise = new Promise((resolve , reject) =>{
     setTimeout(() =>{

@@ -37,7 +37,7 @@
 // console.log(findUser("saran")); // here this code will give error because the user array is defined after a second
 // JavaScript code is syncronous which means it executes continuously so it does not wait 1 sec and it returns an empty array 
 
-// for resolving that we have to use a promisse
+// for resolving that we have to use a promise
 
 function getUser(){
 
@@ -46,7 +46,7 @@ function getUser(){
     setTimeout(() =>{
         user = [{name : "saran" , age: 21},{name : "irfan" , age:"21"},{name : "guest" , age:18}];
         resolve(user); // if you want to resolve something then you need to use resolve() in that place
-        // reject("no data found"); // we can also use reject method to reject the promise
+        reject("no data found"); // we can also use reject method to reject the promise
     },1000)
     })
     

@@ -12,7 +12,7 @@ const promise = new Promise((resolve , reject) =>{
     },2000) 
 })
 
-// whatever you are passing in the resolve() method that will be the input of then of so you cannot give your inputs
+// The value passed in resolve() is automatically received as the argument in .then(). We cannot manually give input to .then(); it depends on what the promise resolves with.
 
 promise.then((value) =>{
     setTimeout(() =>{
