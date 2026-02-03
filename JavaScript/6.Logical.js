@@ -17,3 +17,4 @@ function name(name){
 
 name();
 name("saran")
+name("kumar")
