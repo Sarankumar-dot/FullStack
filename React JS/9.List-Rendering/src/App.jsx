@@ -3,6 +3,7 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
 import { FaTrashCanArrowUp } from "react-icons/fa6";
+import Header from "./Header";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -17,6 +18,7 @@ function App() {
   
   return (
     <>
+     <Header></Header>
       <div>
         <ul>
           {list.map((item) => {
