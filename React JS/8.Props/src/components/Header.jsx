@@ -32,19 +32,19 @@ function Header(props) {
       {/* for styling you there are two types inline or external css */}
       {/* style={HeadingStyle} */}
       <h1>Todo - List</h1>
-      <Child name={name} age={age} />
+      <Child name="saran" age="kumar"/>
     </header>
   );
 }
 
 export default Header;
 
-Header.defaultProps = {
-  name : "guest",
-  age : 18
-}
+// Header.defaultProps = {
+//   name : "guest",
+//   age : 18
+// }
 
-Header.propTypes = {
-  name : PropTypes.string.isRequired,
-  age : PropTypes.number.isRequired
-};
+// Header.propTypes = {
+//   name : PropTypes.string.isRequired,
+//   age : PropTypes.number.isRequired
+// };

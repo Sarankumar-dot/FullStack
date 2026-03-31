@@ -1,60 +1,106 @@
-body{
-  font-family: 'Courier New', Courier, monospace;
-  padding: 0px;
-  margin: 0px;
-  transition: all 0.5s ease-in-out;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-
-.head{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  background-color: rgb(0, 0, 0);
-  transition: all 0.5s ease-in-out;
-  color: aliceblue;
-  
+:root {
+  --primary-dark-blue: #1a2332;
+  --secondary-blue: #2c3e50;
+  --accent-brown: #8b6f47;
+  --gold: #d4a574;
+  --light-cream: #f8f6f3;
+  --text-dark: #2d2d2d;
+  --text-light: #ffffff;
 }
 
-.head:hover{
-  border-bottom-left-radius: 25px;
-  border-bottom-right-radius: 25px;
-  box-shadow: rgb(64, 102, 142) 0px 20px 30px -10px;
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: var(--text-dark);
+  background-color: var(--light-cream);
+  overflow-x: hidden;
 }
 
-#pageName{
-  margin-right: 700px;
-}
-#list{
-  list-style-type: none;
-
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
 }
 
-.head ul {
-  display: flex;
-  gap: 30px;
-  justify-content: space-around; 
-  margin-top: 25px;
+.app {
+  min-height: 100vh;
 }
 
-.container{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+html {
+  scroll-behavior: smooth;
 }
 
-.container h1{
-  margin-top: 100px;
-  font-size: 75px;
+::selection {
+  background-color: var(--accent-brown);
+  color: var(--text-light);
 }
 
-.container p{
-  font-size: 20px;
+/* Scroll Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.container h1:hover{
-  transition: all 0.5s ease-in-out;
-  background-color: aqua;
-  border-radius: 10px;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Utility Animation Classes */
+.animate-on-scroll {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.3s; }
+.delay-4 { animation-delay: 0.4s; }
+.delay-5 { animation-delay: 0.5s; }
