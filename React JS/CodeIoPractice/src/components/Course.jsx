@@ -19,7 +19,6 @@ function Course(props) {
   }
 
 
-
   function ButtonDouble(){
     console.log("double clikc");
     setPurchased(false);

@@ -1,0 +1,39 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "image": "vish",
+      "title": "java dev",
+      "description": "proplayer",
+      "price": 11199
+    },
+    {
+      "id": 2,
+      "image": "vish",
+      "title": "java dev",
+      "description": "proplayer",
+      "price": 99
+    },
+    {
+      "id": 3,
+      "image": "vish",
+      "title": "java dev",
+      "description": "proplayer",
+      "price": 399
+    },
+    {
+      "id": 4,
+      "image": "vish",
+      "title": "java dev",
+      "description": "proplayer",
+      "price": 299
+    },
+    {
+      "id": 5,
+      "image": "vish",
+      "title": "java dev",
+      "description": "proplayer",
+      "price": 999
+    }
+  ]
+}

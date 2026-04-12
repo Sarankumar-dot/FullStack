@@ -1,8 +1,8 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import vish from "../assets/vishal.jpg";
 import Course from "./Course";
 function CourseList() {
-  const [list,setList] = useState([
+  const [list, setList] = useState([
     {
       id: 1,
       image: vish,
@@ -40,7 +40,13 @@ function CourseList() {
     },
   ]);
 
-  function handleDelete(id){
+  useEffect(() => {
+    fetch("https://jsonplaceholder.typicode.com/posts")
+      .then((response) => response.json())
+      .then((data) => console.log(data));
+  }, []);
+
+  function handleDelete(id) {
     const newList = list.filter((value) => value.id != id);
     setList(newList);
   }
@@ -69,7 +75,7 @@ function CourseList() {
       title={value.title}
       description={value.description}
       price={value.price}
-      delete = {handleDelete}
+      delete={handleDelete}
     />
   ));
 
@@ -77,4 +83,3 @@ function CourseList() {
 }
 
 export default CourseList;
-
