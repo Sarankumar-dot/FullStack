@@ -4,27 +4,35 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
 
     <style>
-
-        body{
-            padding:10px;
-            margin: 10px;
-        }
-        
+      body {
+        padding: 10px;
+        margin: 10px;
+      }
     </style>
   </head>
   <body>
     <h1>this is sarankumar</h1>
     <h2>i will get placed before may 15</h2>
 
-    <span class="h1">this is <i>italic </i>span tag which is changed as h1 by using class = "h1" by bootstrap</span>
+    <span class="h1"
+      >this is <i>italic </i>span tag which is changed as h1 by using class =
+      "h1" by bootstrap</span
+    >
     <span class="display-6">this is a span</span>
-    <input type="text" placeholder="enter your name">
+    <input type="text" placeholder="enter your name" />
     <button type="submit">submit</button>
 
-    <p class="text-decoration-underline">this <mark>marked tect </mark>is an underlined text</p>
+    <p class="text-decoration-underline">
+      this <mark>marked tect </mark>is an underlined text
+    </p>
     <p class="text-decoration-line-through">marked text</p>
 
     <p class="text-center">center text</p>
@@ -52,15 +60,95 @@
 
     <button class="btn btn-outline-dark">submit</button>
 
-
     <a href="ht.html" class="btn btn-outline-success">login</a>
 
     <!-- button group -->
 
     <div class="btn-group">
-        <button class="btn btn-outline-primary">login</button>
-        <button class="btn btn-outline-success">success</button>
-        <button class="btn btn-outline-dark">reject</button>
+      <button class="btn btn-outline-primary">login</button>
+      <button class="btn btn-outline-success">success</button>
+      <button class="btn btn-outline-dark">reject</button>
     </div>
+
+    <!-- margin -->
+
+    <div class="bg-danger text-warning fw-bold h1 m-5 p-3">this is a span</div>
+
+    <!-- adding margins in top,bot,left,right as mt-1,mb-1,ms-1,me-1 ms- margin start , me-margin end -->
+    <div class="bg-danger text-warning fw-bold h1 mt-2 p-3">this is a span</div>
+    <!-- mx - used for both left and right which is x axis -->
+    <!-- my - used for top and bot -->
+
+    <!-- same for padding -->
+
+    <!-- border -->
+
+    <div
+      class="text-warning fw-bold h1 me-1 p-3 border border-5 border-info rounded"
+    >
+      this is a rounded span
+    </div>
+    <!-- use rounded and rounded-pill to shape the borders -->
+    <div
+      class="text-warning fw-bold h1 me-1 p-3 border border-5 border-info rounded-pill"
+    >
+      this is a rounded-pill span
+    </div>
+
+    <!-- shadow in bootstrap -->
+    <div class="shadow-lg mt-5">this is a shadow tut</div>
+
+    <span class="border border-primary border-5 rounded-pill bg-danger">this is a span with border and rounded element</span>
+
+    <!-- container -->
+    
+    <div class="container-fluid">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, ducimus nostrum! Unde quia maiores dolor reiciendis quo ex nam reprehenderit accusantium suscipit, ullam enim praesentium molestiae, aspernatur deleniti, totam cumque numquam voluptates nostrum mollitia vitae! Fugit, ut quae enim necessitatibus inventore velit libero earum iure tempora mollitia facere cupiditate, excepturi accusantium dolorum ipsa est voluptates cumque dicta voluptate qui, veritatis impedit consequuntur nam illo. Libero nihil officiis, maiores maxime consequuntur aliquid fuga expedita quibusdam ullam quasi cumque facere asperiores, at distinctio minima et corporis perspiciatis eveniet incidunt suscipit? Nam earum provident quam quia quo minima, maxime obcaecati sint commodi excepturi.</p>
+    </div>
+
+    <!-- grid -->
+
+    <div class="container" style="text-align: center;">
+      <div class="row">
+        <span class="bg-danger col-md-2 border border-dark border-3">grid</span>
+        <span class="bg-danger col-3 border border-dark border-3">grid</span>
+        <span class="bg-danger col-3 border border-dark border-3">grid</span>
+        <span class="bg-danger col-3 border border-dark border-3">grid</span>
+      </div>
+
+      <div class="row justify-content-between">
+        <span class="bg-danger col-4 border border-dark border-2 ">grid</span>
+        <span class="bg-danger col-3 border border-dark border-2">grid</span>
+        <span class="bg-danger col-3 border border-dark border-2">grid</span>
+      </div>
+    </div>
+
+    <!-- nav bar -->
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+      <a class="navbar-brand" href="#">Hidden brand</a>
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
   </body>
 </html>
