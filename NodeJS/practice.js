@@ -1,18 +1,35 @@
-const http = require('http');
+const fs = require("fs");
 
-const server = http.createServer((req , res) => {
-    console.log("request made");
+fs.mkdir("./Practice", (err) => {
+  if (err) {
+    console.log(err.message);
+  } else console.log("folder created");
+});
 
-    console.log(req.url);
-    console.log(req.method);
+// deleting the folder
 
-    res.setHeader('Content-Type' , 'text/html');
-    res.write('<h1>saran</h1>');
+// setTimeout(() => {
+//     if (fs.existsSync("./Practice")) {
+//       fs.rmdir("./Practice", (err) => {
+//         if (err) {
+//           console.log(err.message);
+//         } else console.log("folder deleted");
+//       });
+//     }
+// },4000)
 
-    res.end();
-})
+fs.writeFile("./Practice/file.txt", "hi iam sarankumar", (err) => {
+  if (err) {
+    console.log(err.message);
+  } else console.log("file created written successfully");
+});
 
-
-server.listen(3000,'localhost',(() =>{
-    console.log("server is listening");
-}))
+if (fs.existsSync("./Practice/file.txt")) {
+  fs.readFile("./Practice/file.txt", (err, data) => {
+    if (err) {
+      console.log(err.message);
+    } else {
+      console.log(data.toString());
+    }
+  });
+}

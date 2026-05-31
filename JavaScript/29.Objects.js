@@ -7,9 +7,9 @@
 
 // creating objects
 let person1 = {
-    fname :"saran",
-    sname :"kumar",
-    age:21
+  fname: "saran",
+  sname: "kumar",
+  age: 21,
 };
 
 // creating objects in another way
@@ -19,8 +19,8 @@ console.log(person2.fname);
 
 // accessing object ELEMENT
 console.log(person1.fname);
-// or else 
-console.log(person1['fname']);
+// or else
+console.log(person1["fname"]);
 
 // if we access the values that are not present in the object then it returns undefined
 console.log(person1.marks); // returns undefined
@@ -29,7 +29,6 @@ console.log(person1.marks); // returns undefined
 person1.fname = "Sarankumar";
 person1.sname = "Karthi";
 console.log(person1);
-
 
 // deleting an entire property in objects
 // first create a property named gender
@@ -43,7 +42,6 @@ console.log(person1);
 // checking whether a property is present or not in an object
 console.log("fname" in person1); // uses in keyword
 console.log("noname" in person1); // returns false due to noname not available in objecsts properties
-
 
 // shallow copy of objects
 let person3 = person1; // both person1 and person3 point to the same memory location
@@ -60,25 +58,24 @@ console.log(person4); // person4 is changed
 // Object.assign() method copies all enumerable own properties from one or more source objects to a target object.
 // It returns the target object.
 
-
 // else we can use ... spread operator to create a shallow copy
-let person5 = {...person1}; // creates a shallow copy of person1
+let person5 = { ...person1 }; // creates a shallow copy of person1
 console.log(person5);
 person5.fname = "Kumar"; // changing person5 does not change person1
 console.log(person1); // person1 is not changed
 console.log(person5); // person5 is changed
-// but in spread we cant copy the inner nested objects
-// for that we have to use Object.assign() or JSON methods
 
+// BOTH spread operator and Object.assign() perform ONLY shallow copy
+// Neither can deeply copy nested objects
 
 // nested objects
 let emp1 = {
-    name : "saran",
-    age : 21,   
-    address : {
-        city : "chennai",
-        state : "tamilnadu"
-    }
+  name: "saran",
+  age: 21,
+  address: {
+    city: "chennai",
+    state: "tamilnadu",
+  },
 };
 
 console.log(emp1.address.city); // accessing nested object property
@@ -97,5 +94,5 @@ let emp3 = JSON.parse(JSON.stringify(emp1)); // creates a deep copy of emp1
 console.log(emp3);
 emp3.address.city = "delhi"; // changing nested object property in emp3
 console.log(emp1.address.city); // emp1 is not changed
-console.log(emp3.address.city); // emp3 is changed  
+console.log(emp3.address.city); // emp3 is changed
 // JSON methods convert the object to a JSON string and then parse it back to an object, creating a new object in memory.

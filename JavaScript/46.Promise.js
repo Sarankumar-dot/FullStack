@@ -48,7 +48,7 @@ setTimeout(() =>{
 // eg for resolve
 
 const newPromise = new Promise((resolve,reject) =>{
-    setTimeout(() =>{
+    setTimeout(() => {
         let b = true;
         let obj = {name : "saran"};
         if(b == true){

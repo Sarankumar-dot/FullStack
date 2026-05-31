@@ -1,4 +1,4 @@
-// suppose if you a variable that contains null and undefined values then you can set them 
+// suppose if there is  a variable that contains null and undefined values then you can set them 
 // to some other value in the variable
 
 // eg

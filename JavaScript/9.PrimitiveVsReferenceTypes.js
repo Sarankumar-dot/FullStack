@@ -24,5 +24,5 @@ let user2 = user1;
 
 // eg
 user2.name = "saran";
-console.log(user1.name); // returs saran due to reference
+console.log(user1.name); // returs saran due to same reference
 

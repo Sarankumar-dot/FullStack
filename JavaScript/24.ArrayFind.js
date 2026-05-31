@@ -1,4 +1,4 @@
-// array find is method is used to find only one element which satisfies the condition first
+// array find is a method is used to find only one element which satisfies the condition first
 
 
 // here we are going to find the first element which is greater than 20;

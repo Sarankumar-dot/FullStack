@@ -1,11 +1,11 @@
-import React, { use, useState } from "react";
+import React, { useState } from "react";
 
 const App = () => {
   const [pwd1, setPwd1] = useState("");
   const [pwd2, setPwd2] = useState("");
 
   const [same, setSame] = useState(false);
-  const [check , setCheck] = useState(false);
+  const [check, setCheck] = useState(false);
 
   function handlePwd1(event) {
     setPwd1(event.target.value);
@@ -18,7 +18,6 @@ const App = () => {
   }
 
   function checkSame(event) {
-
     console.log(event.target.checked);
 
     setCheck(event.target.checked);
@@ -39,8 +38,6 @@ const App = () => {
           fontWeight: "bold",
         }}
       >
-
-        
         <div className="mb-3">
           <label className="form-label">Email address</label>
           <input type="email" className="form-control" />
@@ -77,11 +74,9 @@ const App = () => {
           <label className="form-check-label">Check me out</label>
         </div>
 
-        {same ? (
-          check && <p>the passwords are same</p>
-        ) : (
-          check && <p>passwords are not same re enter them</p>
-        )}
+        {same
+          ? check && <p>the passwords are same</p>
+          : check && <p>passwords are not same re enter them</p>}
         <button type="submit" className="btn btn-primary">
           log in
         </button>

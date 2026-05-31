@@ -1,5 +1,5 @@
 // if you want to give a single number as a result from an array then you can use reduce methods
-//reduces an array to a single value
+// reduces an array to a single value
 
 let arr = [1,2];
 

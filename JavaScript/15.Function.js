@@ -28,7 +28,7 @@ function add(a,b){
     return 0;
 }
 
-let r = add(1,2);
+let r = add(2);
 console.log(r);
 
 

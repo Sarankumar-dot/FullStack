@@ -25,3 +25,11 @@ let math = {
 
 console.log(math.add(5,5));
 console.log(math.mul(5,5));
+
+let sar = {
+    div : function(a,b){
+        return a/b;
+    }
+}
+
+console.log(sar.div(1,0));

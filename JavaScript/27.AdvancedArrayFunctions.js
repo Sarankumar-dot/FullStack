@@ -1,11 +1,11 @@
 // flat method
-// if we have any nested arrays inside an array then  they will be removed and added as a normal element
+// if we have any nested arrays inside an array then they will be removed and added as a normal element
 
 let arr = [1,2,3,[4,5],{name:"saran"}];
 console.log(arr.flat()); // removes nested arrays only not objects
 
 // by default we do not want to use depth in flat method
-// but if m=we have more than one nested array we have to mention the depth
+// but if we have more than one nested array we have to mention the depth
 
 let ans = [1,2,[3,4,5,6,[7,8]]];
 console.log(ans.flat(2)); // here depth is provided with 2 because we have two nested loops
@@ -22,7 +22,7 @@ let z = t.flatMap((value) =>{
 console.log(z);
 
 
-// splitting single letters by usning flatMap
+// splitting single letters by using flatMap
 let f = z.flatMap((value) =>{
     return value.split("");
 })

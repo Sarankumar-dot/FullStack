@@ -6,7 +6,7 @@ let num = 10;
 console.log(10 == '10'); // return true
 console.log(10 === '10'); // returns false
 //  but it returns true if
-console.log(10 === 10);
+console.log(10 === 10);5
 //false if
 console.log(10 === 20);
 
