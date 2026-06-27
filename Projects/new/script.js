@@ -1,25 +1,29 @@
-const form = document.getElementById('studentForm');
-
+const form = document.getElementById("studentForm");
 
 const data = [];
-form.addEventListener('submit', (value) => {
+form.addEventListener("submit", async (value) => {
   value.preventDefault();
 
-   const name = document.getElementById('namee').value;
-   const email = document.getElementById('email').value;
+  const name = document.getElementById("namee").value;
+  const email = document.getElementById("email").value;
 
-   console.log(name, email);
+  console.log(name, email);
 
-   const obj = {
-     name : name , 
-     email : email
-   }
+  const obj = {
+    name: name,
+    email: email,
+  };
 
-   data.push(obj);
+  try {
+    const response = await fetch("http://localhost:3000/students", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(obj),
+    });
 
-   console.log(data);
-})
-
-
-
-
+    const data = await response.json();
+    alert("Student added successfully");
+  } catch (err) {
+    alert(err.message);
+  }
+});

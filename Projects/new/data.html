@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Portal</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      body {
+        min-height: 100vh;
+        background:
+          radial-gradient(
+            circle at top left,
+            rgba(13, 110, 253, 0.18),
+            transparent 35%
+          ),
+          radial-gradient(
+            circle at bottom right,
+            rgba(32, 201, 151, 0.14),
+            transparent 30%
+          ),
+          linear-gradient(135deg, #f8fbff 0%, #eef4ff 50%, #f7fafc 100%);
+      }
+
+      .page-shell {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        padding: 3rem 0;
+      }
+
+      .brand-pill {
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        font-size: 0.75rem;
+      }
+
+      .premium-card {
+        backdrop-filter: blur(18px);
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px solid rgba(255, 255, 255, 0.6);
+        box-shadow: 0 24px 80px rgba(15, 23, 42, 0.12);
+      }
+
+      .stat-chip {
+        border: 1px solid rgba(13, 110, 253, 0.12);
+        background: rgba(13, 110, 253, 0.06);
+      }
+
+      #output {
+        border: 1px solid rgba(15, 23, 42, 0.08);
+      }
+
+      .form-control,
+      .btn {
+        border-radius: 0.9rem;
+      }
+
+      .form-control:focus {
+        box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.15);
+      }
+
+      .helper-line {
+        border-top: 1px solid rgba(15, 23, 42, 0.08);
+      }
+
+      .action-card {
+        border: 1px dashed rgba(13, 110, 253, 0.18);
+        background: linear-gradient(
+          180deg,
+          rgba(13, 110, 253, 0.04),
+          rgba(13, 110, 253, 0.01)
+        );
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page-shell">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-10 col-xxl-9">
+            <div class="row g-4 align-items-stretch">
+              <div class="col-lg-5">
+                <div class="premium-card h-100 rounded-5 p-4 p-md-5">
+                  <span
+                    class="badge text-bg-primary-subtle text-primary-emphasis rounded-pill brand-pill mb-3"
+                  >
+                    Student Portal
+                  </span>
+                  <h1 class="display-6 fw-semibold text-dark mb-3">
+                    Create and update student records
+                  </h1>
+                  <p class="text-secondary mb-4">
+                    A clean Bootstrap interface for saving credentials, checking
+                    stored data, and preparing a record for a future update
+                    flow.
+                  </p>
+                  <div class="d-flex flex-wrap gap-2">
+                    <span
+                      class="badge rounded-pill text-bg-light text-secondary px-3 py-2 stat-chip"
+                      >Responsive layout</span
+                    >
+                    <span
+                      class="badge rounded-pill text-bg-light text-secondary px-3 py-2 stat-chip"
+                      >Update-ready UI</span
+                    >
+                    <span
+                      class="badge rounded-pill text-bg-light text-secondary px-3 py-2 stat-chip"
+                      >Bootstrap 5</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-7">
+                <div class="premium-card rounded-5 p-4 p-md-5">
+                  <div
+                    class="d-flex align-items-center justify-content-between mb-4"
+                  >
+                    <div>
+                      <p
+                        class="text-uppercase text-primary fw-semibold small mb-1"
+                      >
+                        Enrollment form
+                      </p>
+                      <h2 class="h3 mb-0">Enter or prepare a record</h2>
+                    </div>
+                    <span
+                      class="badge rounded-pill text-bg-success-subtle text-success-emphasis px-3 py-2"
+                      >Live</span
+                    >
+                  </div>
+
+                  <form id="formm" class="row g-3">
+                    <div class="col-12">
+                      <label for="studentId" class="form-label fw-medium"
+                        >Student record ID</label
+                      >
+                      <input
+                        id="studentId"
+                        type="text"
+                        class="form-control form-control-lg"
+                        placeholder="Optional for future update actions"
+                      />
+                      <div class="form-text">
+                        Use this field later when you wire your PUT request.
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <label for="email" class="form-label fw-medium"
+                        >Email address</label
+                      >
+                      <input
+                        id="email"
+                        type="email"
+                        class="form-control form-control-lg"
+                        placeholder="name@example.com"
+                        aria-describedby="emailHelp"
+                      />
+                      <div id="emailHelp" class="form-text">
+                        We only use this to associate the student record.
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <label for="password" class="form-label fw-medium"
+                        >Password</label
+                      >
+                      <input
+                        type="password"
+                        class="form-control form-control-lg"
+                        id="password"
+                        placeholder="Enter a secure password"
+                      />
+                    </div>
+                    <div class="col-12 d-grid d-sm-flex gap-2 pt-2">
+                      <button type="submit" class="btn btn-primary btn-lg px-4">
+                        Submit record
+                      </button>
+                      <button
+                        type="button"
+                        id="updateData"
+                        class="btn btn-warning btn-lg px-4 text-dark"
+                      >
+                        Update record
+                      </button>
+
+                      <button
+                        type="button"
+                        id="deleteData"
+                        class="btn btn-outline-danger btn-lg px-4 text-dark"
+                      >
+                        Delete record
+                      </button>
+                      <button
+                        type="button"
+                        id="getData"
+                        class="btn btn-outline-success btn-lg px-4"
+                      >
+                        Get data
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+            <div id="output" class="premium-card rounded-5 p-4 p-md-5 mt-4">
+              <div
+                class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-3"
+              >
+                <div>
+                  <p
+                    class="text-uppercase text-secondary fw-semibold small mb-1"
+                  >
+                    Preview
+                  </p>
+                  <h3 class="h4 mb-0">Stored student data</h3>
+                </div>
+                <span class="badge rounded-pill text-bg-dark px-3 py-2"
+                  >Output panel</span
+                >
+              </div>
+              <div class="bg-light rounded-4 p-3 p-md-4 border">
+                <p id="output-p-tag" class="mb-0 text-secondary fw-medium">
+                  No data loaded yet. Click Get data to preview the latest
+                  record, or use the update controls once you add your PUT
+                  logic.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="data.js"></script>
+  </body>
+</html>

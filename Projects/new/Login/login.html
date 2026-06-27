@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f4f7fb;
+        --card: #ffffff;
+        --text: #1f2937;
+        --muted: #6b7280;
+        --border: #d7dee9;
+        --accent: #2563eb;
+        --accent-hover: #1d4ed8;
+        --shadow: 0 20px 50px rgba(15, 23, 42, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(
+          135deg,
+          #eaf2ff 0%,
+          var(--bg) 45%,
+          #eefcf7 100%
+        );
+        color: var(--text);
+        padding: 24px;
+      }
+
+      .login-card {
+        width: 100%;
+        max-width: 420px;
+        background: var(--card);
+        border: 1px solid rgba(215, 222, 233, 0.9);
+        border-radius: 20px;
+        box-shadow: var(--shadow);
+        padding: 32px;
+      }
+
+      .login-card h1 {
+        margin: 0 0 8px;
+        font-size: 2rem;
+      }
+
+      .login-card p {
+        margin: 0 0 24px;
+        color: var(--muted);
+        line-height: 1.5;
+      }
+
+      .form-group {
+        margin-bottom: 18px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+        font-size: 0.95rem;
+      }
+
+      input {
+        width: 100%;
+        padding: 14px 16px;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        font: inherit;
+        outline: none;
+        transition:
+          border-color 0.2s ease,
+          box-shadow 0.2s ease;
+      }
+
+      input:focus {
+        border-color: var(--accent);
+        box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+      }
+
+      .options {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        margin: 8px 0 22px;
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+
+      .remember {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .remember input {
+        width: auto;
+        margin: 0;
+        accent-color: var(--accent);
+      }
+
+      .options a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+
+      .options a:hover {
+        text-decoration: underline;
+      }
+
+      button {
+        width: 100%;
+        padding: 14px 16px;
+        border: 0;
+        border-radius: 12px;
+        background: var(--accent);
+        color: #ffffff;
+        font: inherit;
+        font-weight: 700;
+        cursor: pointer;
+        transition:
+          background 0.2s ease,
+          transform 0.2s ease;
+      }
+
+      button:hover {
+        background: var(--accent-hover);
+      }
+
+      button:active {
+        transform: translateY(1px);
+      }
+
+      .signup {
+        margin-top: 18px;
+        text-align: center;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      .signup a {
+        color: var(--accent);
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      .signup a:hover {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 480px) {
+        .login-card {
+          padding: 24px;
+          border-radius: 16px;
+        }
+
+        .options {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="login-card">
+      <h1>Welcome back</h1>
+
+      <form id="loginForm" action="" method="post">
+        <div class="form-group">
+          <label for="identifier">Email or username</label>
+          <input
+            type="text"
+            id="email"
+            name="identifier"
+            autocomplete="username"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            autocomplete="current-password"
+            required
+          />
+        </div>
+
+        <div class="options">
+          <label class="remember" for="remember">
+            <input type="checkbox" id="remember" name="remember" />
+            Remember me
+          </label>
+
+          <a href="#">Forgot password?</a>
+        </div>
+
+        <button id="formSubmit" type="submit">Login</button>
+      </form>
+
+      <p class="signup">Don't have an account? <a href="#">Create one</a></p>
+    </main>
+
+    <script src="login.js"></script>
+  </body>
+</html>
