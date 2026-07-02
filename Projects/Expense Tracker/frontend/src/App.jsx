@@ -1,13 +1,13 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const App = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
-  const [res,setRes] = useState("");
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+  const [res, setRes] = useState('');
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const navigate = useNavigate();
 
@@ -20,29 +20,29 @@ const App = () => {
   }
 
   async function handleLogin() {
-    try{
-      const request = await fetch("http://localhost:3000/login", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        email,
-        password,
-      }),
-    });
+    try {
+      const request = await fetch('http://localhost:3000/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          email,
+          password,
+        }),
+      });
 
-    const response = await request.json();
+      const response = await request.json();
 
-     if (response.success) {
-       localStorage.setItem("token", response.token);
-       navigate('/dashboard')
-     }
+      if (response.success) {
+        localStorage.setItem('token', response.token);
+        navigate('/dashboard');
+      }
 
-    setRes(response.message);
-    }catch(e){
+      setRes(response.message);
+    } catch (e) {
       console.log(e.message);
     }
   }
-  
+
   return (
     <div className="h-screen flex items-center justify-center bg-gray-100">
       <div className="w-96 bg-white p-8 rounded-xl shadow-lg">
@@ -90,7 +90,13 @@ const App = () => {
         </button>
 
         <p className="text-center text-gray-600 mt-4">
-          Don't have an account?{" "}
+          <Link to="/forgot-password" className="text-blue-500 hover:underline">
+            Forgot-Password?
+          </Link>
+        </p>
+
+        <p className="text-center text-gray-600 mt-4">
+          Don't have an account?{' '}
           <Link to="/signup" className="text-blue-500 hover:underline">
             Sign up
           </Link>
