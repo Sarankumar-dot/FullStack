@@ -63,4 +63,74 @@ const getExpense = async (req, res) => {
   }
 };
 
-module.exports = { createExpense, getExpense };
+const deleteExpense = async (req, res) => {
+  const id = req.params.id;
+  const user_id = req.user.id;
+
+  try {
+    const query = `delete from expenses where id = ? and user_id = ?`;
+
+    const [result] = await db.query(query, [id, user_id]);
+
+    if (result.affectedRows == 0) {
+      return res.status(404).json({
+        success: false,
+        message: 'no expense to delete',
+      });
+    } else {
+      return res.status(200).json({
+        success: true,
+        message: 'expense deleted',
+      });
+    }
+  } catch (e) {
+    return res.status(500).json({
+      success: false,
+      message: e.message,
+    });
+  }
+};
+
+const updateExpense = async (req, res) => {
+  const id = req.params.id;
+  const { title, amount, category, expense_date } = req.body;
+  const user_id = req.user.id;
+
+  if (!title || !amount || !category || !expense_date) {
+    return res.status(400).json({
+      success: false,
+      message: 'All fields are required',
+    });
+  }
+  try {
+    const updateQuery = `update expenses set title = ? , amount = ? ,category = ?,expense_date = ? where id = ? and user_id = ?`;
+
+    const [result] = await db.query(updateQuery, [
+      title,
+      amount,
+      category,
+      expense_date,
+      id,
+      user_id,
+    ]);
+
+    if (result.affectedRows > 0) {
+      return res.status(200).json({
+        success: true,
+        message: 'expense updated',
+      });
+    } else {
+      return res.status(404).json({
+        success: false,
+        message: 'expense doesnt exist',
+      });
+    }
+  } catch (e) {
+    return res.status(500).json({
+      success: false,
+      message: e.message,
+    });
+  }
+};
+
+module.exports = { createExpense, getExpense, deleteExpense, updateExpense };
